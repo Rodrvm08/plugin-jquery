@@ -1,14 +1,17 @@
-$(document).ready(function(){
-    $('#carousel-img').slick({
-        autoplay: true
-    });
-
-    $('.menu-hamburguer').click(function() {
-        $('nav').slideToggle();
+$(document).ready(function() {
+    $('#carousel-imagens').slick({
+        autoplay: true,
+        arrows: false
     })
 
     $('#telefone').mask('(00) 00000-0000', {
-        placeholder: '(xx) xxxxx-xxxx'
+        placeholder: '(DDD) 12345-6789'
+    })
+    $('#cpf').mask('000.000.000-00', {
+        placeholder: '123.456.789-00'
+    })
+    $('#cep').mask('00000-000', {
+        placeholder: '012345-678'
     })
 
     $('form').validate({
@@ -23,36 +26,29 @@ $(document).ready(function(){
             telefone: {
                 required: true
             },
-            mensagem: {
+            endereco: {
                 required: true
             },
-            veículoInteresse: {
-                required: false
+            cep: {
+                required: true
+            },
+            cpf: {
+                required: true
             }
         },
         messages: {
-            nome: 'Por favor, insira o seu nome'
+            nome: 'Por favor, insira o seu nome',
+            email: 'Por favor, insira um email válido',
+            telefone: 'Por favor, insira um telefone válido',
+            endereco: 'Por favor, insira um endereço válido',
+            cep: 'Por favor, insira um CEP válido',
+            cpf: 'Por favor, insira um cpf válido',
         },
         submitHandler: function(form) {
-            console.log(form)
+            alert("Sua requisição foi enviada para análise, parabéns pela aquisição!");
         },
-        invalidHandler: function(evento, validador) {
-            let camposIncorretos = validador.numberOfInvalids();
-            if (camposIncorretos) {
-                alert(`Existem ${camposIncorretos} campos incorretos`)
-            }
+        invalidHandler: function (form, validator) {
+            alert("Por favor, preencha os campos para prosseguir com a compra!");
         }
-    })
-
-    $('.lista-veiculo button').click(function() {
-        const destino = $('#contato');
-
-        const nomeVeiculo = $(this).parent().find('h3').text();
-
-        $('#veículo-interesse').val(nomeVeiculo);
-
-        $('html').animate({
-            scrollTop: destino.offset().top
-        }, 1000)
     })
 })

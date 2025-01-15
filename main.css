@@ -5,164 +5,60 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html {
-    overflow-x: hidden;
-}
-
-.container {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-header, footer {
-    background-color: #192a56;
-    padding-top: 16px;
-    color: #fff;
+body {
+    background-color: #f2f2f2;
+    color: #333;
 }
 
 header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-
-header > .container , footer > .container{
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 16px;
-}
-
-nav {
-    background-color: #575fcf;
-    padding: 16px 0;
-    display: none;
-}
-
-nav li {
-    list-style: none;
-    display: inline;
-    margin-right: 16px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-nav li a {
+    background-color: #007bff;
     color: #fff;
-    text-decoration: none;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0 auto;
 }
 
-.menu-hamburguer {
-    width: 32px;
-    cursor: pointer;
-}
-
-.menu-hamburguer span {
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.container-flex {
-    display: flex;
-}
-
-#sobre-a-loja img {
-    max-width: 400px;
-    margin-right: 24px;
-}
-
-section {
-    padding: 48px 0;
-}
-
-section h2 {
+h2 {
+    text-align: center;
     margin-bottom: 16px;
 }
 
-.lista-veiculo {
-    flex-wrap: wrap;
-}
-
-.lista-veiculo li {
-    list-style: none;
-    max-width: 30%;
-    margin-bottom: 24px;
-}
-
-.lista-veiculo h3 {
-    margin: 16px 0;
-}
-
-.lista-veiculo img {
-    max-width: 100%;
-}
-
-.item-central {
-    margin: 0 5%;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 8px 0;
-    border: none;
-    background-color: rgb(0, 128, 6);
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: italic;
-    cursor: pointer;
-    border-radius: 6px;
-}
-
-.price {
-    margin: 16px 0;
-    display: block;
-}
-
-.price del {
-    color: #ccc;
-    font-size: 14px;
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-campo {
-    margin-bottom: 16px;   
+    margin-bottom: 20px;
 }
 
 .form-campo label {
+    display: block;
     font-weight: bold;
-    display: block;
+    margin-bottom: 5px;
 }
 
-.form-campo input, .form-campo textarea {
+.form-campo input {
     width: 100%;
-    display: block;
-    padding: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.form-campo textarea {
-    resize: none;
-    height: 120px;
+.container button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
 }
 
-form {
-    max-width: 360px;
-}
-
-form button {
-    max-width: 120px;
-}
-
-footer li {
-    list-style: none;
-    margin-left: 16px;
-}
-
-footer li img {
-    height: 32px;
+.error {
+    color: red
 }
